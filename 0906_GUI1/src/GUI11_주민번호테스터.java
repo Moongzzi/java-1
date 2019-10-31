@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class GUI11_주민번호테스터 {
     public static void main(String[] args){
@@ -11,6 +13,37 @@ public class GUI11_주민번호테스터 {
         JLabel lbMinus = new JLabel("-");
         JTextField jm1 = new JTextField(10);
         JButton btTest = new JButton("테스트");
+
+        publid void keyPressed(KeyEvent keyEvent){
+
+        }
+
+        jm1.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent keyEvent) {
+                if(jm0.getText().length() == 6){
+                    jm1.requestFocus();
+                }
+                if(isGood(jm)) {
+
+                    //맞으면 lbMinus = "O"
+                    lbMinus.setText("O");
+                } else {
+
+                    //아니면 lbMinus = "X"
+                    lbMinus.setText("X");
+                }            }
+        }
         btTest.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
